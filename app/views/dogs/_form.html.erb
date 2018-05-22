@@ -26,6 +26,16 @@
     <%= form.number_field :sniffed_butts %>
   </div>
 
+  <div class="field">
+    <%= form.label :profile %>
+    <%= form.file_field :profile %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :photos %>
+    <%= form.file_field :photos, multiple: true, class: "form-control" %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

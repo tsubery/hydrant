@@ -15,5 +15,9 @@
   <%= @dog.sniffed_butts %>
 </p>
 
+<% @dog.photos.each do |photo| %>
+  <%= image_tag(photo.variant(resize: "400x400")) %>
+<% end %>
+
 <%= link_to 'Edit', edit_dog_path(@dog) %> |
 <%= link_to 'Back', dogs_path %>
