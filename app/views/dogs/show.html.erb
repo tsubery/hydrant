@@ -16,7 +16,7 @@
 </p>
 
 <% @dog.photos.each do |photo| %>
-  <%= image_tag(photo.variant(resize: "400x400")) %>
+  <%= image_tag(url_for(photo), width: 400) %>
 <% end %>
 
 <%= link_to 'Edit', edit_dog_path(@dog) %> |
